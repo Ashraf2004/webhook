@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 
 app = FastAPI()
 
-UNOMI_URL = "http://localhost:8181/cxs/profiles"  # Apache Unomi Profiles Endpoint
+UNOMI_URL = "https://cce8-14-97-189-166.ngrok-free.app/cxs/profiles"  # Apache Unomi Profiles Endpoint
 
 # Encode Basic Auth (username:password -> karaf:karaf)
 auth_header = f"Basic {base64.b64encode(b'karaf:karaf').decode()}"
