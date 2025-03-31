@@ -18,7 +18,7 @@ async def receive_event(request: Request):
         # Construct Unomi-compatible payload
         unomi_payload = {
             "itemId": "clickedEmailLinks",
-            "itemType": "profile",
+            "itemType": "event",
             "version": 2,
             "properties": event_data
         }
