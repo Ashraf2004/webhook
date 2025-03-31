@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 
 app = FastAPI()
 
-UNOMI_URL = "https://4c1b-103-108-5-237.ngrok-free.app/cxs/profiles"  # Apache Unomi Profiles Endpoint
+UNOMI_URL = "https://64bd-103-108-5-237.ngrok-free.app/cxs/profiles"  # Apache Unomi Profiles Endpoint
 
 # Encode Basic Auth (username:password -> karaf:karaf)
 auth_header = f"Basic {base64.b64encode(b'karaf:karaf').decode()}"
@@ -17,7 +17,7 @@ async def receive_event(request: Request):
 
         # Construct Unomi-compatible payload
         unomi_payload = {
-            "itemId": "clickedPolicydata",
+            "itemId": "clickedEmailLinks",
             "itemType": "profile",
             "version": 2,
             "properties": event_data
